@@ -1,0 +1,19 @@
+<view class="container">
+
+
+ <form bindsubmit="formSubmit" bindreset="formReset"> 
+
+ <view wx:for="{{tags}}"> 
+ <label>{{item}}:
+   <input id="inputs" name="{{names[index]}}" placeholder="{{user_Info[index]}}" class="inputbox"></input>
+</label> 
+</view>
+
+ <view>
+<button formType="submit" id="oBtn" type="primary" > 保存修改</button>
+</view> 
+
+</form>
+
+
+</view>

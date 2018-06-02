@@ -1,0 +1,10 @@
+.oBtn_xiugai{
+
+  margin:25rpx;
+
+}
+
+.oBtn_qiandao{
+  margin:25rpx;
+  width:600rpx;
+}
