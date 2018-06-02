@@ -16,7 +16,7 @@ BSSID
 ## Tips
 
 
-###1. how to initiate ?
+### 1. how to initiate ?
 
 **install dependencies**
 
