@@ -11,13 +11,8 @@
      <view>{{item}} : {{user_Info[index]}}</view>
   </label>
 </view>
-
-
-<view class="oBtn_qiandao">
-   <button type="primary" bindtap='searchWifi' >
+   <button type="primary" bindtap='search' >
    点击签到
-   </button>
-</view>
-
-
+   </button>  
+<button type="secondary" bindtap='search'>发布</button>
 </view>

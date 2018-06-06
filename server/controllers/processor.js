@@ -3,16 +3,19 @@ data = {}
 /**
  * 任务有没有挂载
  */
-var isTasked = function (task) { return data[tesk] }
+var isTasked = function (task) { 
+  return data[task] 
+}
 
 /**
  * 挂任务
  */
 async function setTask(task, obj) {
-  if (isTasked(task) === undefined) {
-    data[task] = []
-  }
-  data[task].push(obj)
+  // if (isTasked(task) === undefined) {
+  //   data[task] = []
+  // }
+  data[task] = makeArray(obj);
+
 }
 
 /**
@@ -47,14 +50,19 @@ var getObjLength = function (obj) {
 /**
  * 计算数组在对象里的不匹配率
  */
-var getRate = function (obj, array) {
+var getRate = function (obj, task) {
   var numOfNum = 0;
+  var array = data[task];
   for (var i = 0; i < array.length; i++) {
     if (obj[array[i]] === undefined) {
       numOfNum++;
     }
   }
-  return numOfNum / getObjLength(obj);
+  if(numOfNum / getObjLength(obj)<=0.5){
+    return true
+  }else{
+    return false
+  }
 };
 
 /**
@@ -70,7 +78,8 @@ var makeArray = function (obj) {
 }
 
 module.exports = {
-  processor,
+  setTask,
   toExcel,
-  isTasked
+  isTasked,
+  getRate
 };

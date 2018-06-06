@@ -85,9 +85,9 @@ Page({
   },
 
   /**
-   * 签到发出请求
+   * 签到发布请求
    */
-  searchWifi: function () {
+search: function () {
     //在app.js 加入onHide: function(){try { 
     //wx.removeStorageSync('Baseline')
     //}catch(e) {
@@ -116,24 +116,22 @@ Page({
           temp.push(wifi_List[j])
         }
       }
-      console.log(obj)
-      console.log(temp)
+
       try {
         wx.setStorageSync('Baseline', obj)
       } catch (e) {
         console.log(e)
       }
       wx.getStorageSync('Baseline')
-      console.log(wx.getStorageSync('Baseline'))
+
       //
       wx.request({
             url: config.service.POSTUrl,
             data: {
-              task: "xxxxxx",
+              task: "06557",
               issue: "xxxxxxxx",
               sign:"Kevin",
-              wifi: wx.getStorageSync('Baseline'),
-
+              wifi: wx.getStorageSync('Baseline')
             },
             method: 'POST',
             header: {
@@ -149,4 +147,4 @@ Page({
           })
         })
     } 
-})  
+})

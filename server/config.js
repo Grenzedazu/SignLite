@@ -10,6 +10,5 @@ const CONF={
             database : 'cAuth'
         }
     },
-    recordName:'cAppinfo',
 };
 module.exports=CONF;
