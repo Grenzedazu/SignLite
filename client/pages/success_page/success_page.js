@@ -1,4 +1,4 @@
-// pages/fabu/fabu.js
+// pages/qiandao_success/qiandao_success.js
 Page({
 
   /**
@@ -6,6 +6,12 @@ Page({
    */
   data: {
   
+  },
+  oBtn:function()
+  {
+    wx.navigateTo({
+      url: '../index/index'
+    })
   },
 
   /**

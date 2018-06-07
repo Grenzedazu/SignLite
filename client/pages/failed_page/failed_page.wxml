@@ -1,0 +1,25 @@
+<view class="container">
+
+    <view class="icon-box" class="div">
+      <icon type="warn" size="93"></icon>
+    </view>
+
+<view class="div">
+   <text class="wenzi" class="wenzi">签到失败</text>
+</view>
+
+<view class="beizhu">请确保设备在合法有效范围内
+</view>
+
+
+<view class="btn">
+<view >
+   <button type="primary" class="btn" bindtap="oBtn">重新签到</button>
+</view>
+
+<view >
+   <button class="btn" bindtap="oBtn2">返回主页</button>
+</view>
+</view>
+
+</view>

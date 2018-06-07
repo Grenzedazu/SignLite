@@ -1,7 +1,7 @@
 <view class="container">
+<view >基本信息</view>
 
-
- <form bindsubmit="formSubmit" bindreset="formReset"> 
+ <form bindsubmit="formSubmit" bindreset="formReset" > 
 
  <view wx:for="{{tags}}"> 
  <label>{{item}}:
@@ -9,11 +9,11 @@
 </label> 
 </view>
 
- <view>
-<button formType="submit" id="oBtn" type="primary" > 保存修改</button>
+ <view class="forms">
+<button formType="submit" id="oBtn1" type="primary" > 保存修改</button>
+<button id= "oBtn2" bindtap='click'>返回</button>
 </view> 
 
 </form>
-
 
 </view>

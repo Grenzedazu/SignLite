@@ -1,0 +1,23 @@
+.container{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;/*垂直居中*/
+  /* justify-content: space-around;水平居中 */
+
+}
+
+.form view{
+  margin:125rpx;
+}
+
+#inputs{
+  height:100rpx;
+}
+
+
+#oBtn{
+  height:100rpx;
+}

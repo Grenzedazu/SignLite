@@ -1,0 +1,18 @@
+<view class="container">
+
+<view class="page__bd" class="div">
+    <view class="icon-box">
+      <icon type="success" size="93"></icon>
+    </view>
+</view>
+
+<view class="div">
+   <text class="wenzi" class="wenzi">签到成功</text>
+</view>
+
+
+<view class="div">
+   <button class="btn" bindtap="oBtn">返回主页</button>
+</view>
+
+</view>

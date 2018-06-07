@@ -1,0 +1,24 @@
+.container{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;/*垂直居中*/
+  /* justify-content: space-around; */
+}
+
+.btn{
+  width:300rpx;
+  height:100rpx;
+}
+
+.div{
+  margin:50rpx;
+}
+
+.wenzi{
+  font-size: 50rpx;
+  
+}
+

@@ -1,0 +1,20 @@
+<!-- <view class="container">
+<view>发布人：{{Datas.userInfo[0]}}</view> -->
+<view class="container">
+<form class="form" bindsubmit="formSubmit" bindreset="formReset"> 
+
+<view>发布人：{{Datas.userInfo[0]}}</view>
+ <view> 
+ <label class="label">发布口令:
+   <input id="inputs" name="task" placeholder="请输入发布的签到内容" class="inputbox"></input>
+</label> 
+</view>
+
+ <view>
+<button formType="submit" id="oBtn" type="primary" bindtap = "search"> 提交</button>
+</view> 
+
+</form>
+
+</view> 
+
