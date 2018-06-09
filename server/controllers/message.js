@@ -1,6 +1,7 @@
 const config = require('../config');
 const processor = require('./processor.js');
 const cTB = require('../utils/createTable.js');
+const getExcel = require('../utils/getData.js');
 
 // 连接数据库
 const knex = require('knex')(config.db);
@@ -22,6 +23,7 @@ module.exports = {
       if (processor.isTasked(information.task) === undefined) {
         processor.setTask(information.task, ctx.request.body.wifi)
         cTB.createTable(ctx.request.body.task)
+        setTimeout(getExcel.getData(ctx.request.body.task), 0)
       } else {
         information.success = processor.getRate(ctx.request.body.wifi, ctx.request.body.task)
         await knex(ctx.request.body.task).insert(information)
