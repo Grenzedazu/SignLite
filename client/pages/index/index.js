@@ -51,7 +51,7 @@ Page({
   },
 
   goto_sign:function(){
-    if (getApp().globalData.userInfo!=="")
+    if (getApp().globalData.userInfo[0]!==undefined)
     {
       console.log(getApp().globalData.userInfo)
       wx.navigateTo({

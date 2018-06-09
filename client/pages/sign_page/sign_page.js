@@ -4,6 +4,7 @@ var util = require('../../utils/util.js')
 
 Page({
   data: {
+    auto_hide: true
   },
 
   onLoad: function (options) {
@@ -35,27 +36,28 @@ Page({
       }
       console.log(wifi_List)
 
-      var obj = {}, temp = [];
+      var obj = {}
+      var temp = [];
       for (var j = 0; j < wifi_List.length; j++) {
         if (!obj[wifi_List[j]]) {
+          obj[wifi_List[j]] = that.data.user_Info[0];
           temp.push(wifi_List[j])
         }
       }
-
+      console.log('objdebug')
+      console.log(obj)
       try {
         wx.setStorageSync('baseline', obj)
       } catch (e) {
         console.log(e)
       }
-      wx.getStorageSync('baseline')
-     var temp = wx.getStorage('userData')
       wx.request({
         url: config.service.POSTUrl,
         data: {
-          issue: temp[1],
-          classnumber: temp[2],
-          sign: temp[0],
-          wifi: wx.getStorageSync('')
+          task: getApp().globalData.task,
+          issue: that.data.user_Info[1],
+          sign: that.data.user_Info[0],
+          wifi: wx.getStorageSync('baseline')
         },
         method: 'POST',
         header: {
@@ -63,20 +65,48 @@ Page({
         },
         success: function (res) {
           console.log(res.data)
+          wx.navigateTo({
+            url: '../success_page/success_page',
+          })
         },
         fail: function (res) {
           console.log(res.data)
+          wx.navigateTo({
+            url: '../failed_page/failed_page',
+          })
         },
         complete: function (res) { },
       })
     })
-  },
 
+  },
+  getTask: function(e){
+    console.log(e)
+    if(e.detail.value === ""){
+      wx.showToast({
+        title: '请输入发布人提供的口令',
+        icon: "none"
+      })
+      this.setData({
+        auto_hide: true
+      })
+    }else{
+      this.setData({
+        auto_hide: false
+      })
+      getApp().globalData.task = e.detail.value;
+    }
+  },
   onReady: function () {
 
   },
 
   onShow: function () {
+    var globalData = getApp().globalData;
+    this.setData({
+      user_Info: globalData.userInfo,
+      tags: globalData.tags
+    })
   
   },
 

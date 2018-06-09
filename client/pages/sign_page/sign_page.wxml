@@ -1,20 +1,23 @@
 <view class="container">
 
-
-
-<view>用户信息 </view>
-
+<view class='headView'>
+    <open-data class='icon' mode='aspectFit' type='userAvatarUrl'></open-data>
+    <view class='icon'/>
+</view>
 <view class="user_info">
   <label  class="label" wx:for="{{tags}}">
      <view class="user_information">{{item}} : {{user_Info[index]}}</view>
   </label>
 </view>
-
+<view class="task" >
+<input placeholder= "在这里输入口令" bindblur='getTask' auto-focus='true'></input>
+</view>
 <view class="oBtn_xiugai">
-   <button type="secondary" bindtap="spring_to_user_info" style="box-shadow: 4rpx 4rpx 4rpx 4rpx #aaa">添加、修改信息</button> 
-   <button type="primary" bindtap='search' style="box-shadow: 4rpx 4rpx 4rpx 4rpx #aaa" >
-   点击签到
+<button disabled="{{auto_hide}}" type="primary" bindtap='search' style="box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2)" >
+点击签到
    </button>
+   <button type="secondary" bindtap="spring_to_user_info" style="box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2)">添加、修改信息</button> 
+     
 </view>
 
 

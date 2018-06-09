@@ -1,17 +1,20 @@
 <!-- <view class="container">
 <view>发布人：{{Datas.userInfo[0]}}</view> -->
 <view class="container">
+<view class='headView'>
+    <open-data class='icon' mode='aspectFit' type='userAvatarUrl'></open-data>
+    <view class='icon'/>
+</view>
 <form class="form" bindsubmit="formSubmit" bindreset="formReset"> 
 
 <view>发布人：{{Datas.userInfo[0]}}</view>
  <view> 
  <label class="label">发布口令:
-   <input id="inputs" name="task" placeholder="请输入发布的签到内容" class="inputbox"></input>
+   <input id="inputs" name="task" placeholder="请输入发布的签到内容" class="inputbox" bindblur='getTask' auto-focus='true'></input>
 </label> 
 </view>
-
  <view>
-<button formType="submit" id="oBtn" type="primary" bindtap="search" style="box-shadow: 2rpx 2rpx 2rpx 2rpx #aaa"> 提交</button>
+<button formType="submit" id="oBtn" type="primary" bindtap="search" style="box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2)" disabled="{{auto_hide}}"> 提交</button>
 </view> 
 
 </form>

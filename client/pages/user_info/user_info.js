@@ -2,7 +2,6 @@ var config = require('../../config.js')
 
 Page({
   data: {
-  
   },
 
   formSubmit: function (e) {
@@ -20,8 +19,8 @@ Page({
         data: globalData.userInfo,
       })
       console.log(e.detail.value)
-      wx.navigateTo({
-        url: '../sign_page/sign_page',
+      wx.navigateBack({
+        delta:1
       })
     }
     else {
@@ -53,7 +52,6 @@ Page({
   },
 
   onShow: function () {
-
   },
 
   onHide: function () {

@@ -20,7 +20,7 @@ App({
   ,
   onHide: function(){
     wx.removeStorage({
-      key: 'Baseline'
+      key: 'baseline'
     })
   }
 })

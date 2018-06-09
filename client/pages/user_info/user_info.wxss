@@ -1,9 +1,9 @@
 .inputbox{
   height:70rpx;
   width:600rpx;
-  border:3rpx silver solid ;
   margin-top:20rpx;
   margin-bottom: 20rpx;
+  border-bottom: 1px solid #A0A0A0;
 }
 
 .forms{
@@ -22,11 +22,13 @@
   height: 100rpx;
   width:275rpx;
   float:right;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);  
 }
 
 #oBtn2{
   height: 100rpx;
   width:275rpx;
   float:left;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);  
 }
 

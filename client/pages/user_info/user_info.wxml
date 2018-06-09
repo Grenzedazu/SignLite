@@ -1,19 +1,17 @@
 <view class="container">
-<view >基本信息</view>
+  <form bindsubmit="formSubmit" bindreset="formReset">
 
- <form bindsubmit="formSubmit" bindreset="formReset" > 
+    <view wx:for="{{tags}}">
+      <label>{{item}}:
+        <input id="inputs" name="{{names[index]}}" placeholder="{{user_Info[index]}}" class="inputbox"></input>
+      </label>
+    </view>
 
- <view wx:for="{{tags}}"> 
- <label>{{item}}:
-   <input id="inputs" name="{{names[index]}}" placeholder="{{user_Info[index]}}" class="inputbox"></input>
-</label> 
-</view>
+    <view class="forms">
+      <button formType="submit" id="oBtn1" type="primary"> 保存修改</button>
+      <button id="oBtn2" bindtap='click'>放弃修改</button>
+    </view>
 
- <view class="forms">
-<button formType="submit" id="oBtn1" type="primary" > 保存修改</button>
-<button id= "oBtn2" bindtap='click'>返回</button>
-</view> 
-
-</form>
+  </form>
 
 </view>

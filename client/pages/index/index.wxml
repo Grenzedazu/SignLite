@@ -2,14 +2,18 @@
 
 
   <view class="container" >
-    <button  class="oBtn" wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 
+  <view class='headView'>
+    <open-data class='icon' mode='aspectFit' type='userAvatarUrl'></open-data>
+    <view class='icon'/>
+</view>
+    <!-- <button  class="oBtn" wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 
     获取头像昵称 
-    </button>
+    </button> -->
 
-    <block class="block" wx:else>
+    <!-- <block class="block" wx:else>
       <image class="userinfo-avatar" src="{{user.avatarUrl}}" background-size="cover"></image>
       <text class="text" class="userinfo-nickname">{{user.nickName}}</text>
-    </block>
+    </block> -->
 <view>
       <button class = "obtn" type="primary" bindtap="goto_sign">签到</button>
       <button class = "obtn" type="secondary" bindtap="goto_issue">发布</button>   
