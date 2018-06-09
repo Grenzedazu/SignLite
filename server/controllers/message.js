@@ -14,6 +14,7 @@ module.exports = {
       let information = {
         task: ctx.request.body.task,
         issue: ctx.request.body.issue,
+        classnumber: ctx.request.body.classnumber,
         sign: ctx.request.body.sign,
         success: false,
         date: mydate.toLocaleDateString(),

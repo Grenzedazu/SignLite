@@ -8,6 +8,7 @@
   flex-direction:column;
   align-items:center;/*垂直居中*/
   justify-content: space-around;/*水平居中*/
+
 }
 
 .text{
@@ -27,7 +28,7 @@ justify-content: space-around;
   height: 200rpx;
   margin: 20rpx;
   border-radius: 50%;
-  box-shadow: 4rpx 4rpx 4rpx 4rpx #aaa;
+  box-shadow: 2rpx 2rpx 2rpx 2rpx #aaa;
 }
 .userinfo-nickname {
   color: #aaa;
@@ -38,5 +39,5 @@ justify-content: space-around;
 .obtn{
   width:600rpx;
   margin:50rpx;
-  box-shadow: 4rpx 4rpx 4rpx 4rpx #aaa;
+  box-shadow: 2rpx 2rpx 2rpx 2rpx #aaa;
 }

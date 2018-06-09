@@ -20,8 +20,8 @@ Page({
         data: globalData.userInfo,
       })
       console.log(e.detail.value)
-      wx.redirectTo({
-        url: '../qiandao/qiandao',
+      wx.navigateTo({
+        url: '../sign_page/sign_page',
       })
     }
     else {

@@ -2,7 +2,7 @@
 
 
   <view class="container" >
-    <button  class="oBtn" wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo"        bindgetuserinfo="getUserInfo"> 
+    <button  class="oBtn" wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 
     获取头像昵称 
     </button>
 

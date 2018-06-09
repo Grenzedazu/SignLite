@@ -38,26 +38,24 @@ Page({
       var obj = {}, temp = [];
       for (var j = 0; j < wifi_List.length; j++) {
         if (!obj[wifi_List[j]]) {
-          obj[wifi_List[j]] = that.data.user_Info[0];
           temp.push(wifi_List[j])
         }
       }
 
       try {
-        wx.setStorageSync('Baseline', obj)
+        wx.setStorageSync('baseline', obj)
       } catch (e) {
         console.log(e)
       }
-      wx.getStorageSync('Baseline')
-
-      //
+      wx.getStorageSync('baseline')
+     var temp = wx.getStorage('userData')
       wx.request({
         url: config.service.POSTUrl,
         data: {
-          task: "06557",
-          issue: "xxxxxxxx",
-          sign: "Kevin",
-          wifi: wx.getStorageSync('Baseline')
+          issue: temp[1],
+          classnumber: temp[2],
+          sign: temp[0],
+          wifi: wx.getStorageSync('')
         },
         method: 'POST',
         header: {

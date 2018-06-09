@@ -11,7 +11,7 @@
 </view>
 
  <view>
-<button formType="submit" id="oBtn" type="primary" bindtap = "search"> 提交</button>
+<button formType="submit" id="oBtn" type="primary" bindtap="search" style="box-shadow: 2rpx 2rpx 2rpx 2rpx #aaa"> 提交</button>
 </view> 
 
 </form>

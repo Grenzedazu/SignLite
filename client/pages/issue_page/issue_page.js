@@ -1,4 +1,5 @@
-
+var config = require('../../config')
+var util = require('../../utils/util.js')
 Page({
 
   data: {
@@ -36,7 +37,7 @@ Page({
       var obj = {}, temp = [];
       for (var j = 0; j < wifi_List.length; j++) {
         if (!obj[wifi_List[j]]) {
-          obj[wifi_List[j]] = that.data.user_Info[0];
+          wifi_List[j] = getApp().globalData.userInfo[0]
           temp.push(wifi_List[j])
         }
       }
@@ -47,14 +48,15 @@ Page({
         console.log(e)
       }
       wx.getStorageSync('Baseline')
-
-      //
+      var temp = wx.getStorageSync('userData')
+      
       wx.request({
             url: config.service.POSTUrl,
             data: {
-              task: "06557",
-              issue: "xxxxxxxx",
-              sign:"Kevin",
+              task: getApp().globalData.task.task,
+              issue: "",
+              classnumber:'',
+              sign:temp[0],
               wifi: wx.getStorageSync('Baseline')
             },
             method: 'POST',

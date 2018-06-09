@@ -11,8 +11,8 @@
 </view>
 
 <view class="oBtn_xiugai">
-   <button type="primary" bindtap="spring_to_user_info">添加、修改信息</button>
-   <button type="primary" bindtap='search' >
+   <button type="secondary" bindtap="spring_to_user_info" style="box-shadow: 4rpx 4rpx 4rpx 4rpx #aaa">添加、修改信息</button> 
+   <button type="primary" bindtap='search' style="box-shadow: 4rpx 4rpx 4rpx 4rpx #aaa" >
    点击签到
    </button>
 </view>

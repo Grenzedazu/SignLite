@@ -1,12 +1,10 @@
 var xl = require('excel4node');
-var rd = require('../utils/redis.js');
-const redisconfig = require('../utils/config.js');
 data = {}
 /**
  * 任务有没有挂载
  */
 var isTasked = function (task) { 
-  return rd.get(task)
+  return data[task]
 }
 
 /**
@@ -16,8 +14,7 @@ async function setTask(task, obj) {
   // if (isTasked(task) === undefined) {
   //   data[task] = []
   // }
-  rd.set(task, makeArray(obj),3000);
-  // data[task] = makeArray(obj);
+  data[task] = makeArray(obj);
 
 }
 
