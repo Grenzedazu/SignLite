@@ -25,7 +25,7 @@ var toExcel = function (task) {
   var taskObj = data[task]
   var array = makeArray(taskObj[0])
   for (var j = 0; j < taskObj.length; j++) {
-
+    
   }
 
   var myWb = new xl.Workbook();

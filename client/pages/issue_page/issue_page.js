@@ -67,7 +67,10 @@ Page({
             success: function (res) { 
               console.log(res.data)
               wx.showToast({
-                title: '发布成功',
+                title: '发布成功'
+              })
+              wx.navigateTo({
+                url: '../index/index',
               })
             },
             fail: function (res) {
