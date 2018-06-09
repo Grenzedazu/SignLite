@@ -83,5 +83,9 @@ Page({
     wx.navigateTo({
       url: '../issue_page/issue_page'　　// 签到页面
     })
+  },
+  getExcel: function(){
+    const excel = require('../../utils/toExcel.js')
+    excel.getExcel()
   }
 })

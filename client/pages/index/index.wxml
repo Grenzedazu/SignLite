@@ -15,6 +15,7 @@
       <text class="text" class="userinfo-nickname">{{user.nickName}}</text>
     </block> -->
 <view>
+<button class = "obtn" type="primary" bindtap = "getExcel">届不到的excel</button>
       <button class = "obtn" type="primary" bindtap="goto_sign">签到</button>
       <button class = "obtn" type="secondary" bindtap="goto_issue">发布</button>   
  </view>     
